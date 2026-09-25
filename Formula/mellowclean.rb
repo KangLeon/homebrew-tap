@@ -1,8 +1,8 @@
 class Mellowclean < Formula
   desc "Calm, transparent Mac cleaner with a native window and CLI"
   homepage "https://github.com/KangLeon/MellowClean"
-  url "https://github.com/KangLeon/MellowClean/archive/refs/tags/v0.2.0.tar.gz"
-  sha256 "82b0903371e1050f31d4a541d36e406e3e3d1b733c9ab94d1e4881710ea63997"
+  url "https://github.com/KangLeon/MellowClean/archive/refs/tags/v0.2.1.tar.gz"
+  sha256 "b1c29fe01f5f2c732163d57277106afa8028c5eca7760256fcfd788740f5b1d0"
   license "MIT"
 
   depends_on macos: :ventura
@@ -23,7 +23,7 @@ class Mellowclean < Formula
   end
 
   test do
-    assert_equal "0.2.0", shell_output("#{bin}/mellowclean --version").strip
+    assert_equal "0.2.1", shell_output("#{bin}/mellowclean --version").strip
     assert_match "MellowClean", shell_output("#{bin}/mellowclean --help")
     assert_path_exists prefix/"MellowClean.app/Contents/MacOS/MellowClean"
     assert_path_exists prefix/"MellowClean.app/Contents/Resources/AppIcon.icns"
